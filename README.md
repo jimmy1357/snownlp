@@ -73,6 +73,8 @@ s.sim([u'文章'])# [0.3756070762985226, 0, 0]
 
 ~~~~
 $ pip install snownlp
+#当修改git工程下的代码后，需要重新安装到本机，在snownlp根目录下(有setup.py的目录)执行
+$ python setup.py install
 ~~~~
 
 ## 关于训练
