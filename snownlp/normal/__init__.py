@@ -31,7 +31,7 @@ def zh2hans(sent):
 
 def get_sentences(doc):
     line_break = re.compile('[\r\n]')
-    delimiter = re.compile('[，。？！；,.?!;]')
+    delimiter = re.compile('[，。？！；,?!;]')
     sentences = []
     for line in line_break.split(doc):
         line = line.strip()
