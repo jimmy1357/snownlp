@@ -66,6 +66,17 @@ class SnowNLP(object):
         for index in rank.top_index(limit):
             ret.append(sents[index])
         return ret
+    
+    # sort the sentences by the order in the original article
+    def summary_inorder(self, limit=5):
+        summ = self.summary(limit)
+        sents = self.sentences
+        # de-duplication
+        unique = list(set(summ))
+        #for u in unique:                                                                                                                                             
+        #    print(ur"debug   "+ u)
+        unique.sort(key=sents.index)
+        return unique
 
     def keywords(self, limit=5, merge=False):
         doc = []
